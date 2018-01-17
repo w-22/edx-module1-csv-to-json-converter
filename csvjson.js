@@ -3,12 +3,12 @@ const fs = require('fs')
 const path = require('path')
 const csv = require('csvtojson')
 
-// hardcoding file locations
+// hardcoded file names and locations
 const csvFile = path.join(__dirname, 'customer-data.csv')
 const jsonFile = path.join(__dirname, 'customer-data.json')
 
 // temporary array for output data
-var output = []
+let output = []
 
 // add each row to the array
 const loadRow = (row) => {
@@ -23,7 +23,7 @@ const writeJson = (err) => {
 
   const content = JSON.stringify(output, null, 2)// convert from the array to JSON string
 
-  fs.writeFile(jsonFile, content, 'utf8', (err) => {
+  fs.writeFileSync(jsonFile, content, 'utf8', (err) => {
     if (err) {
       throw err
     }
