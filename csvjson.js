@@ -15,7 +15,7 @@ const loadRow = (row) => {
   output.push(row)
 }
 
-// write to a file
+// write to a file, replacing the file if it already exists
 const writeJson = (err) => {
   if (err) {
     throw err
