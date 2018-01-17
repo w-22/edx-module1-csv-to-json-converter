@@ -23,7 +23,7 @@ const writeJson = (err) => {
 
   const content = JSON.stringify(output, null, 2)// convert from the array to JSON string
 
-  fs.writeFileSync(jsonFile, content, 'utf8', (err) => {
+  fs.writeFile(jsonFile, content, 'utf8', (err) => {
     if (err) {
       throw err
     }
