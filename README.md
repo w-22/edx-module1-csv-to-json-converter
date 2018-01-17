@@ -1,7 +1,7 @@
 # edx-module1-csv-to-json-converter
 Module 1 Assignment Lab: CSV to JSON Converter
 
-My solution utilises npm module svtojson.
+My solution utilises npm module csvtojson.
 
 I divided code into 2 functions:
 1. loadRow - adds each row to temporary array
