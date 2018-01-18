@@ -1,6 +1,6 @@
 {
   "name": "CSV-JSON-converter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Converts csv file into json file",
    "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
