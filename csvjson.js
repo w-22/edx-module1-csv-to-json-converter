@@ -10,19 +10,19 @@ const jsonFile = path.join(__dirname, 'customer-data.json')
 // temporary array for output data
 let output = []
 
-// add each row to the array
+// adds each row to the array
 const loadRow = (row) => {
   output.push(row)
 }
 
-// write to a file, replacing the file if it already exists
 const writeJson = (err) => {
   if (err) {
     throw err
   }
 
   const content = JSON.stringify(output, null, 2)// convert from the array to JSON string
-
+  
+  // write to a file, replacing the file if it already exists
   fs.writeFile(jsonFile, content, 'utf8', (err) => {
     if (err) {
       throw err
